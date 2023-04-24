@@ -72,8 +72,3 @@ Space Complexity Rules of thumb
 i.Most primitives (Booleans, numbers, undefined, null) are constant space
 ii.Strings require O(n) space (where n is the string length)
 iii.Reference types are generally O(n), where n is the length (for arrays) or the number of keys (for objects)
-
-
-4.Evaluate different algorithms using time and space complexities using Big O?
-
-5.

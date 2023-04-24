@@ -1,5 +1,5 @@
 1.What is BIG O Notation and why we have to use this?
-Big O Notation is a way of telling the code quality by calculating the time or space it takes.
+Ans: Big O Notation is a way of telling the code quality by calculating the time or space it takes.
 For example : It is like Grading a particular program which we write, like
 Great
 Better
@@ -37,9 +37,42 @@ If you run these in your browser the result in seconds shows Approach 2 is faste
 
 This is where the Big O Notation concept comes in.
 
-2.Simplify BIG O Notation expressions
+2.Definition of Big O Notation and Simplify BIG O Notation expressions
+Ans: Big O Notation is about calculating / understanding the runtime of an algorithm or a program as the input which we provide grows. 
+In Layman's terms it is like telling the code quality by calculating the time or space it takes.
+It can be labeled as : "O(f(n))"
+Linear f(n) : (f(n) = n)
+Quadratic f(n) : (f(n) = n²)
+Constand f(n) : (f(n) = 1)
+In the same way f(n) can be entirely different.
+
+Simplifying the Big O expressions:
+i.Constants Don't Matter
+O(2n)   --------->  O(n)
+O(500)  --------->  O(1)
+O(13n²) --------->  O(n²)
+
+ii.Small terms Don't Matter
+O(n+10)    --------->  O(n)
+O(5n+2)    --------->  O(n)
+O(13n²+5n) --------->  O(n²)
+
+Important BIG O Shorthands
+i.Arithmetic operations are Constant
+ii.Variable assignment are constant
+iii.Accessing elements in array(by index) or Object(by key) is constant
+iv.In a loop, the complexity is the length of the loop times the complexity of whatever happens inside of the loop
+
 
 3.Define Time and Space complexities?
+Ans: Time Complexity - It is how we analyze the runtime of the algorithm when the input number grows to infinity.
+
+Space Complexity: It is how we analyze the space of the algorithm(Auxilary space complexity), not the value initialization space in memory when the input number grows to infinity.
+Space Complexity Rules of thumb
+i.Most primitives (Booleans, numbers, undefined, null) are constant space
+ii.Strings require O(n) space (where n is the string length)
+iii.Reference types are generally O(n), where n is the length (for arrays) or the number of keys (for objects)
+
 
 4.Evaluate different algorithms using time and space complexities using Big O?
 

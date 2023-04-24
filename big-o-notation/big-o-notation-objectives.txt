@@ -8,6 +8,34 @@ Awful
 Worst
 but interms of the time it takes and space it consumes. As a problem might have multiple solutions,
 BIG O Notation will help us in understanding which works best.
+Ex: A simple addUpto function which gives the sum of the no:s, has two solutions
+Approach 1:
+function addUpTo(n) {
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += i;
+  }
+  return total;
+}
+
+var t1 = performance.now();
+addUpTo(1000000000);
+var t2 = performance.now();
+console.log(`Time Elapsed: ${(t2 - t1) / 1000} seconds.`)
+
+Approach 2: 
+function addUpTo(n) {
+  return n * (n + 1) / 2;
+}
+
+var time1 = performance.now();
+addUpTo(1000000000);
+var time2 = performance.now();
+console.log(`Time Elapsed: ${(time2 - time1) / 1000} seconds.`)
+
+If you run these in your browser the result in seconds shows Approach 2 is faster.
+
+This is where the Big O Notation concept comes in.
 
 2.Simplify BIG O Notation expressions
 

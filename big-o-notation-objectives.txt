@@ -1,0 +1,18 @@
+1.What is BIG O Notation and why we have to use this?
+Big O Notation is a way of telling the code quality by calculating the time or space it takes.
+For example : It is like Grading a particular program which we write, like
+Great
+Better
+Good
+Awful
+Worst
+but interms of the time it takes and space it consumes. As a problem might have multiple solutions,
+BIG O Notation will help us in understanding which works best.
+
+2.Simplify BIG O Notation expressions
+
+3.Define Time and Space complexities?
+
+4.Evaluate different algorithms using time and space complexities using Big O?
+
+5.

@@ -82,8 +82,12 @@ function charCount(str) {
     // return object at end
 }
 
-
 step 4: Solve / Simplify
-
+If you can solve the problem after breaking it done then go ahead. If not follow the below steps by Simplifying it!!
+SIMPLIFY (Refer the image "solve_simplify" for the program solution)
+i.Find the core difficulty in what you're trying to do
+ii.Temporarily ignore that difficulty
+iii.Write a simplified solution
+iv.Then incorporate that difficulty back in
 
 step 5: Look back and refactor

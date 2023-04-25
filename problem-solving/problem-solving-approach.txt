@@ -8,8 +8,40 @@ ii. Master common problem solving patterns
 
 3.Problem solving strategies?
 Ans: We can follow the below steps in order to approach a problem to solve
-step 1: Understand the problem
+step 1: UNDERSTAND THE PROBLEM
+-> Questions you need to ask yourself or interviewer inorder to understand the problem completely.
+i.Can I restate the problem in my own words?
+ii.What are the inputs that go into the problem?
+iii.What are the outputs that should come from the solution to the problem?
+iv.Can the outputs be determined from the inputs? In other words, do I have enough information to solve the problem? (You may not be able to answer this question until you set about solving the problem. That's okay; it's still worth considering the question at this early stage.)
+v.How should I label the important pieces of data that are a part of the problem?
 
+->Example: Write a function which takes two numbers and returns their sum.
+i.Can I restate the problem in my own words?
+Ask: Is it like implementing an addition. correct?
+
+ii.What are the inputs that go into the problem?
+Ask: Are my inputs 
+        - Integer alone
+        - Floats
+        - what about strings or big numbers?
+        - Is there any restriction that function should allow only two numbers?
+
+iii.What are the outputs that should come from the solution to the problem?
+Ask: what type of outputs are expected?
+        - Int? float? strings? or anything is fine?
+
+iv.Can the outputs be determined from the inputs? In other words, do I have enough information to solve the problem? (You may not be able to answer this question until you set about solving the problem. That's okay; it's still worth considering the question at this early stage.)
+Ask: Do i have all the information required in implementing the logic or do i need to have any other values? For ex you can ask
+        - what if the user passes only one number?
+        - if the number is not provided should we return undefined or null or etc.,
+        - should i add 0 to perform the operation?
+
+v.How should I label the important pieces of data that are a part of the problem?
+Ask: Are there any specific terms you want me to use for the data like
+     - function name should be add()?
+     - params name should be num1, num2?
+     - should i display it as sum when the result is returned?
 
 step 2: Explore concrete examples
 

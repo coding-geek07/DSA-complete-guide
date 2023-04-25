@@ -44,9 +44,43 @@ Ask: Are there any specific terms you want me to use for the data like
      - should i display it as sum when the result is returned?
 
 step 2: Explore concrete examples
+Basically we need to explore all output options and clarify the doubts with those examples
+-> EXPLORE EXAMPLES
+    i.Start with Simple Examples
+    ii.Progress to More Complex Examples
+    iii.Explore Examples with Empty Inputs
+    iv.Explore Examples with Invalid Inputs
 
+Example: Write a function which takes in a string and returns counts of each character in the string.
+i.Start with Simple Examples
+    - charCount("aaaa"); o/p : {a: 4}
+    - charCount("hello"); o/p: {h: 1, e:1, l:2, o:1}
+
+ii.Progress to More Complex Examples
+    - what if the function has input with spaces? should we consider them? - "my phone got lost"
+    - what about special characters, numbers and should we consider case sensitive as well? - "My email is demo#$123@gmail.com" - how should we o/p this? should we add any restriction?   
+    
+iii.Explore Examples with Empty Inputs
+    - what if the string is empty? should we o/p null or undefined or 0 or any string saying "empty string"?
+
+iv.Explore Examples with Invalid Inputs
+    - what if they enter invalid inputs like null, empty object, number, boolean? should we return error or anything specific? 
+    
+We should be asking these questions inorder to get a fair understanding on the outputs expected and to handle errors.
 
 step 3: Break it down
+Explicitly write out the steps you need to take.
+This forces you to think about the code you'll write before you write it, and helps you catch any lingering conceptual issues or misunderstandings before you dive in and have to worry about details (e.g. language syntax) as well.
+
+Example: Same program as above
+function charCount(str) {
+    // make object to return at end
+    // loop over string, for each character...
+        // if the char is a number/letter AND is a key in object, add one to count
+        // if the char is a number/letter AND not in object, add it to object and set value to 1
+        // if character is something else (space, period, etc.) don't do anything
+    // return object at end
+}
 
 
 step 4: Solve / Simplify

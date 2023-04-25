@@ -43,7 +43,7 @@ In Layman's terms it is like telling the code quality by calculating the time or
 It can be labeled as : "O(f(n))"
 Linear f(n) : (f(n) = n)
 Quadratic f(n) : (f(n) = n²)
-Constand f(n) : (f(n) = 1)
+Constant f(n) : (f(n) = 1)
 In the same way f(n) can be entirely different.
 
 Simplifying the Big O expressions:

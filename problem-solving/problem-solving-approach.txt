@@ -1,0 +1,23 @@
+1.What is an Algorithm?
+Ans: An algorithm is basically a series of steps or process to solve a task.
+
+2.How do you improve problem solving skills?
+Ans: we can follow a two step process 
+i. Devise a plan to solve problems
+ii. Master common problem solving patterns
+
+3.Problem solving strategies?
+Ans: We can follow the below steps in order to approach a problem to solve
+step 1: Understand the problem
+
+
+step 2: Explore concrete examples
+
+
+step 3: Break it down
+
+
+step 4: Solve / Simplify
+
+
+step 5: Look back and refactor

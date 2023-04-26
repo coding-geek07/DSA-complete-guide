@@ -1,0 +1,14 @@
+1.What are problem solving patterns?
+Ans: It is a type of technique which you can apply in solving the problem but not necessarily one specific pattern will help in resolving all the problems out there. It is good to know these patterns as it can help in solving few problems. You can explore common problem solving patterns from Google.
+Some Patterns:
+Frequency Counter
+Multiple Pointers
+Sliding Window
+Divide and Conquer
+Dynamic Programming
+Greedy Algorithms
+Backtracking
+Many more!
+
+2.What is a Frequency Counter pattern?
+Ans:

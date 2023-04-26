@@ -1,0 +1,82 @@
+Write a function called same, which accepts two arrays. The function should return true if every value in the array has it's corresponding value squared in the second array. The frequency of values must be the same.
+
+same([1,2,3], [4,1,9]) // true
+same([1,2,3], [1,9]) // false
+same([1,2,1], [4,4,1]) // false (must be same frequency)
+
+Ans: Approaching the problem
+1. understanding the problem
+i.restating
+same function - two arrays input
+return true or false, basically comparision function
+
+ii.About type of Inputs
+input - two arrays only or it can be multiple?
+		2 arrays length same or different
+		incase different wat to com
+		float points or only integers
+		negative numbers are allowed
+		null or undefined
+		string?
+		comparision always should be from first to second?
+
+iii.About the outputs (Here using step 2: Explore concrete examples)
+output	first array first element -> second array first element?
+		any indices fArr1El = sArr3El jumble?
+		empty? allow or not?
+		special characters or normal strings? not allow
+		error msg ?
+
+iv.Covered possible outputs and whether any other inputs are required in the above questions
+so covered iv and v 
+step 2: Concrete examples
+[1,2,3] [4,1,9] -> t , {1: 1,4: 1,9: 1} {4:1, 1:1, 9:1}
+[1,2,3] [4,1,1] -> f
+[2, 4] [16, 4, 36] -> false
+[1,1,2] [1,4,1] -> true (frequency is same)
+[1,1,2] [1,4,4] -> false (frequencyis notsame fArr has two 1s sArr should have two 1s)
+
+step 3: Break it down
+function same(arr1, arr2) {
+    // two arrays
+	// declare 2 objects and calculate frequency of each item in first array and second array, insert them in object
+	// declare return boolean variable matchingArrays 
+	// take each entry of object1 and object 2, check square of it available in second object?
+		// matchingArrays = true if the above step passes
+		// if it is there, is it matching the frequency of each item?
+			// matchingArrays = false break from that step
+			
+			
+// return matchingArrays
+}
+
+step 4: Solve / Simplify
+function same(arr1, arr2) {
+    arr1.map(item => item*item); 
+    let firstArrObj = getObjFromArr(arr1);
+    let secondArrObj = getObjFromArr(arr2);
+    let matchingArrays = false;
+    
+    for(let key in firstArrObj) {
+        if (secondArrObj.hasOwnProperty(key) && secondArrObj[key] === firstArrObj[key]) {
+            matchingArrays = true;
+        } else {
+            matchingArrays = false;
+            break;
+        }
+    }
+    return matchingArrays;
+}
+function getObjFromArr(arr) {
+    let arrObj = {};
+    for(let arrItem of arr) {
+        if (!arrObj.hasOwnProperty(arrItem)) {
+            arrObj[arrItem] = 1;
+        } else {
+            arrObj[arrItem] = arrObj[arrItem]++;
+        }
+    }
+    return arrObj;
+}
+
+same([1,2,3],[4,1,9]);

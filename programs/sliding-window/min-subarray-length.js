@@ -25,7 +25,7 @@ function minSubArrayLen(nums, sum) {
     let start = 0;
     let end = 0;
     let minLen = Infinity;
-
+    //[2, 3, 1, 2, 4, 3], 7
     while (start < nums.length) {
         // if current window doesn't add up to the given sum then 
         // move the window to right

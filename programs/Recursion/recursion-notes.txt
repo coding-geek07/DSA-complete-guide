@@ -1,0 +1,17 @@
+Basic recursion: 
+
+1. We have to follow the two essential things
+    i. Base Case 
+    ii. Return proper value to continue the recursion
+
+Helper Method recursion
+We have an outer function which supplies the parameters or the variable values.
+using which we can declare an inner recursion function which then uses the outside declared variables 
+and at the end returns the result.
+
+Ex: collectOddValues program (Helper method approach refer in problem set 1)
+
+PURE RECURSION TIPS:
+1. For arrays, use methods like slice, the spread operator, and concat that make copies of arrays so you do not mutate them.
+2. Remember that strings are immutable so you will need to use methods like slice, substr, or substring to make copies of strings.
+3.To make copies of objects use Object.assign, or the spread operator.

@@ -62,7 +62,6 @@ Write a function called power which accepts a base and an exponent. The function
 
 function power(base, exponent) {
     if (exponent === 0) return 1;
-
     return base * (power(base, exponent - 1));
 }
 console.log(power(2, 0));
@@ -93,6 +92,11 @@ function recursiveRange(num) {
     return helperMethod(num);
 }
 console.log(recursiveRange(10));
+Pure Recursion
+function recursiveRange(x){
+   if (x === 0 ) return 0;
+   return x + recursiveRange(x-1);
+}
 
 6.fib
 Write a recursive function called fib which accepts a number and returns the nth number in the Fibonacci sequence. Recall that the Fibonacci sequence is the sequence of whole numbers 1, 1, 2, 3, 5, 8, ... which starts with 1 and 1, and where every number thereafter is equal to the sum of the previous two numbers.
@@ -113,3 +117,17 @@ function fib(num) {
     return helperMethod(num);
 }
 console.log(fib(35));
+
+Pure Recursion Approach
+function fib(n){
+    if (n <= 2) return 1;
+    return fib(n-1) + fib(n-2);
+}
+
+7.reverse
+Write a recursive function called reverse which accepts a string and returns a new string in reverse.
+function reverse(str) {
+    if (!str.length) return '';
+    return str[str.length - 1] + reverse(str.slice(0, str.length - 1));
+}
+console.log(reverse('awesome'));

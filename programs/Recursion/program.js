@@ -1,7 +1,8 @@
-function isPalindrome(str) {
-    if (str.length === 1 || str.length === 2) return true;
-    if (str[0] === str.slice(-1)) return isPalindrome(str.slice(1, -1));
-    return false;
+function someRecursive(arr, callBackFunc) {
+    if (!arr.length) return false;
+    if (callBackFunc([arr[0]])) return true;
+    return someRecursive(arr.slice(1), callBackFunc);
 }
-console.log(isPalindrome('foobar'));
-console.log(isPalindrome('tacocat'));
+const isOdd = val => val % 2 !== 0;
+console.log(someRecursive([1, 2, 3, 4], isOdd));
+console.log(someRecursive([4, 6, 8], val => val > 10));

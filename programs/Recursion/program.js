@@ -1,10 +1,5 @@
-function power(base, exponent) {
-    if (exponent === 0) return 1;
-
-    return base * (power(base, exponent - 1));
+function productOfArray(arr) {
+    if (!arr.length) return 1;
+    return arr[0] * productOfArray(arr.slice(1));
 }
-console.log(power(2, 0));
-/* 2 * power(2, 3)
-    2 * power(2, 2)
-        2 * power(2, 1)
-            2 * power(2, 0) */
+console.log(productOfArray([1, 2, 3, 10]));

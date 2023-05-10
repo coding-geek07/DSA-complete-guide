@@ -1,11 +1,16 @@
-function recursiveRange(num) {
-    let sum = 0;
+function fib(num) {
+    if (num === 1 || num === 2) return 1;
+    let arr = [1, 1];
+    let i = 0, j = 1;
     function helperMethod(num) {
-        if (num > 0) {
-            sum = num + helperMethod(num - 1);
+        if (arr.length < num) {
+            arr.push(arr[i] + arr[j]);
+            i++;
+            j++;
+            return helperMethod(num);
         }
-        return sum;
+        return arr[j];
     }
     return helperMethod(num);
 }
-console.log(recursiveRange(10));
+console.log(fib(35));

@@ -93,4 +93,23 @@ function recursiveRange(num) {
     return helperMethod(num);
 }
 console.log(recursiveRange(10));
-            
+
+6.fib
+Write a recursive function called fib which accepts a number and returns the nth number in the Fibonacci sequence. Recall that the Fibonacci sequence is the sequence of whole numbers 1, 1, 2, 3, 5, 8, ... which starts with 1 and 1, and where every number thereafter is equal to the sum of the previous two numbers.
+
+function fib(num) {
+    if (num === 1 || num === 2) return 1;
+    let arr = [1, 1];
+    let i = 0, j = 1;
+    function helperMethod(num) {
+        if (arr.length < num) {
+            arr.push(arr[i] + arr[j]);
+            i++;
+            j++;
+            return helperMethod(num);
+        }
+        return arr[j];
+    }
+    return helperMethod(num);
+}
+console.log(fib(35));

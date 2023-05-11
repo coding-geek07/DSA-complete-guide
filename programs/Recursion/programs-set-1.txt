@@ -162,3 +162,21 @@ console.log(someRecursive([4, 6, 8], val => val > 10));
 
 10.flatten
 Write a recursive function called flatten which accepts an array of arrays and returns a new array with all values flattened.
+
+function flatten(arr) {
+    let flattenArr = [];
+    for (const item of arr) {
+        if (Array.isArray(item)) {
+            flattenArr = flattenArr.concat(flatten(item));
+        } else {
+            flattenArr.push(item);
+        }
+    }
+    return flattenArr;
+}
+
+console.log(flatten([1, 2, 3, [4, 5]]));
+console.log(flatten([1, [2, [3, 4], [[5]]]]));
+
+11.capitalizeFirst
+Write a recursive function called capitalizeFirst. Given an array of strings, capitalize the first letter of each string in the array.

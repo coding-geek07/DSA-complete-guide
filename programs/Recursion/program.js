@@ -1,8 +1,14 @@
-function someRecursive(arr, callBackFunc) {
-    if (!arr.length) return false;
-    if (callBackFunc([arr[0]])) return true;
-    return someRecursive(arr.slice(1), callBackFunc);
+function flatten(arr) {
+    let flattenArr = [];
+    for (const item of arr) {
+        if (Array.isArray(item)) {
+            flattenArr = flattenArr.concat(flatten(item));
+        } else {
+            flattenArr.push(item);
+        }
+    }
+    return flattenArr;
 }
-const isOdd = val => val % 2 !== 0;
-console.log(someRecursive([1, 2, 3, 4], isOdd));
-console.log(someRecursive([4, 6, 8], val => val > 10));
+
+console.log(flatten([1, 2, 3, [4, 5]]));
+console.log(flatten([1, [2, [3, 4], [[5]]]]));

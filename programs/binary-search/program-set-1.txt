@@ -44,5 +44,5 @@ function searchSubstrOccurence(str, substr) {
     return counter;
 
 }
-console.log('wowomgzomg', 'omg');
+console.log(searchSubstrOccurence('wowomgzomg', 'omg'));
 console.log(searchSubstrOccurence('harold haha with hayhahaharo', 'haha'));

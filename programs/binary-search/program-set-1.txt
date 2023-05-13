@@ -25,3 +25,24 @@ function search(array, val) {
 search([1, 2, 3, 4, 5, 6], 4) // 3
 search([1, 2, 3, 4, 5, 6], 6) // 5
 search([1, 2, 3, 4, 5, 6], 11) // -1
+
+2.searchSubstrOccurence
+Naive Approach
+function searchSubstrOccurence(str, substr) {
+    let counter = 0, j = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === substr[j]) {
+            j += 1;
+        } else {
+            j = 0;
+        }
+        if (j === substr.length) {
+            counter++;
+            j = 0;
+        }
+    }
+    return counter;
+
+}
+console.log('wowomgzomg', 'omg');
+console.log(searchSubstrOccurence('harold haha with hayhahaharo', 'haha'));

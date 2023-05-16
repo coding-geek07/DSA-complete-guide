@@ -1,0 +1,10 @@
+Bubble Sort?
+It is a way of sorting the elements of an array by comparing the sibling element 
+i.e if el1 > el2 , swap them and continue to all the elements of an array, where for each iteration 
+over an array the largest item will get the last position
+
+[2,1,0]
+    [1,2,0]
+        [1,0,2] -> 1st iteration
+            [0,1,2] -> it will loop through ignoring the last value as it is the greatest (it is ignored)
+   

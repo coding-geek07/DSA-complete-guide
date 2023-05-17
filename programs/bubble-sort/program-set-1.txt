@@ -1,0 +1,36 @@
+1.Sort an array [5,3,4,1,2]
+function bubbleSortArr(arr, endLength = arr.length - 1) {
+    // declare j = 0; endLength = arrlength
+    // loop through elements while j <= endlenght
+    // el1 > el2, swap
+    // one iteration over then endlength - 1
+    let j = 1;
+    let isSwapped = false;
+    for (let i = 0; i <= endLength; i++) {
+        if (i == endLength) {
+            // checks if it swapped any items in previous iteration, if not then it is already sorted.
+            if (isSwapped) {
+                console.log('loop');
+                bubbleSortArr(arr, i - 1);
+            } else {
+                console.log(isSwapped);
+                break;
+            }
+        }
+        if (arr[i] > arr[j]) {
+            arr = swap(arr, i, j);
+            isSwapped = true;
+        }
+        j++;
+    }
+    return arr;
+}
+function swap(arr, idx1, idx2) {
+    let temp = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = temp;
+
+    // [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]; //ES6 way
+    return arr;
+}
+console.log(bubbleSortArr([1, 3, 2, 4, 5]));
